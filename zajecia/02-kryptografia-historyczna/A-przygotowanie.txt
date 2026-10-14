@@ -1,0 +1,61 @@
+Laboratorium 2 — Kryptografia historyczna
+Środa, 14.10.2026, 12:15–14:00, sala GE-b 510, GR6 i GR7
+
+Z CZEGO SIĘ PRZYGOTOWAĆ
+
+Materiał: „Laboratorium 2 (Kryptografia historyczna)” w ISOD oraz notatki z wykładu.
+https://isod.ee.pw.edu.pl/isod-prac/?wicket:bookmarkablePage=:isod.app.courseinfo.CourseInfoPage&idCourseDef=3567
+
+Przed zajęciami przećwicz:
+
+1. Szyfr Cezara
+   - Szyfrowanie przez dodanie stałego przesunięcia, odszyfrowanie przez jego odjęcie, modulo 256.
+   - Różnica między alfabetem 26 liter a alfabetem 256 wartości bajtowych.
+
+2. Analiza statystyczna
+   - Histogram i częstości znaków, rozpoznawanie sensownego tekstu.
+   - Dlaczego zamiana symboli (np. przesunięcie) nie zmienia entropii.
+   - Dlaczego krótka próbka może być myląca.
+
+3. Szyfr Vigenère'a — wariant bajtowy
+   - Klucz powtarzany cyklicznie: indeks klucza = i % długość_klucza.
+   - Szyfrowanie: c[i] = (p[i] + K[i % m]) % 256, odszyfrowanie: odejmowanie modulo 256.
+   - Dodajemy wartości bajtów klucza. NIE zamieniamy liter klucza na pozycje w alfabecie A–Z.
+   - Zastanów się, kiedy identyczne fragmenty tekstu dają identyczne fragmenty kryptogramu.
+
+4. RC4
+   - Inicjalizacja tablicy S (KSA), generowanie strumienia (PRGA), zamiana elementów, XOR z danymi.
+   - Umiej prześledzić pseudokod z ISOD i wyjaśnić, dlaczego XOR pozwala odszyfrować dane.
+
+5. Entropia i atak brute force
+   - H = -sum(p * log2(p)) z histogramu, z pominięciem zerowych częstości.
+   - Liczba kluczy dla danego alfabetu i długości klucza.
+   - Ograniczenia statystycznej oceny, czy odszyfrowanie jest poprawne.
+
+6. Python 3
+   - Pliki tekstowe UTF-8 i pliki binarne; różnica między znakami tekstu a bajtami jego kodowania.
+   - bytes / bytearray, ord, XOR (^), modulo (%).
+   - Odczyt i zapis plików binarnych: open(..., "rb") i open(..., "wb").
+   - bytes.hex() do zapisu szesnastkowego, repr() do podglądu bajtów ze znakami sterującymi.
+   - Sortowanie listy krotek, np. (ocena, klucz) — remisy rozstrzyga drugi element.
+   - itertools.product, pomiar czasu przez time.perf_counter.
+
+ŚRODOWISKO
+
+Python 3, edytor i możliwość uruchomienia skryptu z terminala. Wystarczy biblioteka standardowa.
+Sprawdź wcześniej odczyt i zapis pliku tekstowego i binarnego.
+
+SAMOKONTROLA — sprawdź, czy umiesz odpowiedzieć:
+
+- Dlaczego (x ^ k) ^ k = x?
+- Ile wynosi entropia ciągu złożonego z jednego powtarzanego bajtu? A z dwóch równie częstych bajtów?
+- Jak długość klucza wpływa na jego powtarzanie się i na koszt ataku brute force?
+
+ORGANIZACJA
+
+- Przeznacz około 60 minut na przygotowanie. Nie ma pracy domowej do oddania.
+- Na zajęciach dostaniesz trzy krótkie zadania, po 1 pkt (razem 3 pkt).
+- Wykonasz je na miejscu i oddasz jeden pakiet wyników przed końcem zajęć.
+- Pliki z danymi do zadań dostaniesz na początku zajęć.
+- Możesz korzystać z materiałów ISOD.
+- Możesz przygotować w domu własny kod i notatki oraz korzystać z nich na zajęciach. Podczas zajęć nie wolno korzystać z modeli językowych (LLM), w tym czatów AI, asystentów programistycznych i podpowiedzi kodu opartych na LLM. Wyłącz te funkcje w edytorze przed rozpoczęciem pracy. Na zajęciach samodzielnie dostosowujesz i uruchamiasz kod, analizujesz wyniki oraz przygotowujesz raport. Musisz umieć wyjaśnić cały oddawany kod, także przygotowany wcześniej.

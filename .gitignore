@@ -1,0 +1,17 @@
+# Publikujemy wyłącznie jawnie wskazane materiały dla studentów.
+/*
+!/.gitignore
+!/README.md
+!/zajecia/
+/zajecia/*
+!/zajecia/02-kryptografia-historyczna/
+/zajecia/02-kryptografia-historyczna/*
+!/zajecia/02-kryptografia-historyczna/A-przygotowanie.txt
+!/zajecia/02-kryptografia-historyczna/B-polecenia.md
+!/zajecia/02-kryptografia-historyczna/B-polecenia.pdf
+!/zajecia/02-kryptografia-historyczna/Ochrona_danych_Lab_2_Kryptografia_historyczna.pdf
+!/zajecia/02-kryptografia-historyczna/pliki-dla-studentow/
+/zajecia/02-kryptografia-historyczna/pliki-dla-studentow/*
+!/zajecia/02-kryptografia-historyczna/pliki-dla-studentow/cezar.bin
+!/zajecia/02-kryptografia-historyczna/pliki-dla-studentow/tekst_pl.txt
+!/zajecia/02-kryptografia-historyczna/pliki-dla-studentow/rc4.bin
