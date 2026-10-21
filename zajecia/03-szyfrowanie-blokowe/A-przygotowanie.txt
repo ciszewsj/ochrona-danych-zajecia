@@ -1,0 +1,19 @@
+﻿LABORATORIUM 3 — ZAKRES DO NAUCZENIA SIĘ
+
+- AES: szyfr blokowy, rozmiar bloku, długości klucza.
+- Tryby ECB i CBC; IV.
+- Dopełnienie PKCS#7.
+- PBKDF2-HMAC-SHA256; sól, liczba iteracji, długość klucza.
+- Kodowanie UTF-8; bajty i zapis szesnastkowy.
+- Entropia Shannona dla rozkładu bajtów.
+- Przestrzeń kluczy i przeszukiwanie kandydatów.
+- Poufność, integralność i uwierzytelnianie danych.
+
+ŹRÓDŁA
+- NIST FIPS 197 — AES: https://csrc.nist.gov/pubs/fips/197/final
+- NIST SP 800-38A — ECB i CBC: https://csrc.nist.gov/pubs/sp/800/38/a/final
+- RFC 8018 — PBKDF2: https://datatracker.ietf.org/doc/html/rfc8018
+- NIST CSRC — entropia: https://csrc.nist.gov/glossary/term/entropy
+- Laboratorium 3 (Szyfrowanie blokowe), materiały ISOD.
+- Dokumentacja biblioteki kryptograficznej wybranego języka.
+- Przykładowa dokumentacja PyCryptodome: tryby, PBKDF2, PKCS#7.
